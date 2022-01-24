@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&family=Josefin+Sans:wght@300;400;600&family=Kumbh+Sans:wght@400;700&family=Manrope:wght@500;700&family=Montserrat:wght@700&family=Open+Sans:wght@300;400&family=Poppins:wght@200;300;400;500&family=Roboto:wght@100;300;400;500&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+    <img src="images/logo.svg" alt="">
+    <div class="calc-container">
+      <section class="input">
+        <p>Bill</p>
+        <input type="text" placeholder="0">
+        <p> Select Tip %</p>
+        <div class="select-tip">
+          <span data-prct="5">5%</span>
+          <span data-prct="10">10%</span>
+          <span data-prct="15">15%</span>
+          <span data-prct="25">25%</span>
+          <span data-prct="50">50%</span>
+          <span id="custom">Custom</span>
+        </div>
+
+
+        <p> Number of People <span id="error">Can't be zero</span></p>
+        <input type="text" placeholder="0">
+      </section>
+      <section class="result">
+        <main>
+          <div class="amount">
+            <span class="left">
+              <h3>Tip Amount</h3>
+              <h4>/ person</h4>
+            </span>
+            <span>
+              0.00$
+            </span>
+          </div>
+
+          <div class="total">
+            <span class="left">
+              <h3>Total</h3>
+              <h4>/ person</h4>
+            </span>
+            <span>
+              0.00$
+            </span>
+          </div>
+        </main>
+
+        <button>Reset</button>
+      </section>
+
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: monospace,sans-serif;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #c5e4e7;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .container {
+    height: 600px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    height: 100vh;
+  }
+}
+
+.container img {
+  width: 70px;
+  height: 50px;
+}
+
+.calc-container {
+  width: 600px;
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 55% 45%;
+      grid-template-columns: 55% 45%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+@media (max-width: 767px) {
+  .calc-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+  }
+}
+
+.calc-container .input {
+  padding-right: 20px;
+}
+
+.calc-container .input p {
+  color: #00494d;
+  font-weight: 700;
+  font-size: 10px;
+  margin-top: 30px;
+}
+
+.calc-container .input p span {
+  color: red;
+  float: right;
+  opacity: 0;
+}
+
+.calc-container .input input {
+  display: block;
+  font-size: 20px;
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #f4fafa;
+  border: none;
+  padding: 5px;
+  text-align: right;
+  border-radius: 5px;
+  -webkit-transition: .1s;
+  transition: .1s;
+  font-weight: 700;
+  border: 2px solid transparent;
+}
+
+.calc-container .input input:focus {
+  outline: 2px solid #26c0ab;
+  color: #00494d;
+}
+
+.calc-container .input input.active {
+  border: 2px solid red;
+}
+
+.calc-container .input .select-tip {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (30%)[3];
+      grid-template-columns: repeat(3, 30%);
+  gap: 5%;
+}
+
+@media (max-width: 767px) {
+  .calc-container .input .select-tip {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (45%)[2];
+        grid-template-columns: repeat(2, 45%);
+    -webkit-column-gap: 10%;
+            column-gap: 10%;
+  }
+}
+
+.calc-container .input .select-tip span:not(:last-child) {
+  background-color: #00494d;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px 0;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.calc-container .input .select-tip span:not(:last-child).active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.calc-container .input .select-tip span:not(:last-child):hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+}
+
+.calc-container .input .select-tip span:last-child {
+  color: #00494d;
+  background-color: #f4fafa;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calc-container .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #00494d;
+}
+
+@media (max-width: 767px) {
+  .calc-container .result {
+    margin-top: 10px;
+  }
+}
+
+.calc-container .result main > div {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.calc-container .result main > div .left {
+  color: white;
+  font-weight: normal;
+}
+
+.calc-container .result main > div .left h3 {
+  font-size: 10px;
+  font-weight: normal;
+  margin: 5px 0;
+}
+
+.calc-container .result main > div .left h4 {
+  margin: 5px 0;
+  font-size: 8px;
+  font-weight: normal;
+  color: #7f9c9f;
+}
+
+.calc-container .result main > div > span:not(.left) {
+  color: #26c0ab;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.calc-container .result button {
+  width: 100%;
+  background-color: #26c0ab;
+  color: #00494d;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.calc-container .result button.active {
+  cursor: pointer;
+}
+
+.calc-container .result button.active:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+}
+
+.calc-container .result button:not(.active) {
+  opacity: .2;
+}
+/*# sourceMappingURL=main.css.map */
